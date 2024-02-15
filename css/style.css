@@ -1,0 +1,85 @@
+/* UNIVERSE */
+* {
+  font-family: "Exo 2", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 70px;
+}
+h1#mainHeading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+.menuContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  max-height: 500px;
+  width: 100%;
+}
+.menuContainer div {
+  background-color: #999999;
+  border: 3px solid rgb(0, 0, 0);
+  position: relative;
+  padding: 40px 10px 5px 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.tooltip {
+  background-color: #d59898;
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  border: 3px solid rgb(0, 0, 0);
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 3.5px 10px;
+}
+.menuContainer div:nth-child(2) .tooltip {
+  background-color: #c14543;
+}
+.menuContainer div:nth-child(3) .tooltip {
+  background-color: #e5d198;
+}
+/* ===BREAKPOINT's=== */
+
+/* DESKTOP */
+
+@media screen and (min-width: 992px) {
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    padding: 45px;
+  }
+  .menuContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr;
+  }
+  .menuContainer div:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 20px;
+  }
+  .menuContainer {
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr 1fr;
+  }
+}
